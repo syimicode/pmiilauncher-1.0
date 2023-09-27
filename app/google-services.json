@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "957711699471",
+    "firebase_url": "https://pmii-launcher-388cc-default-rtdb.firebaseio.com",
+    "project_id": "pmii-launcher-388cc",
+    "storage_bucket": "pmii-launcher-388cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957711699471:android:42746e249b2a9dc838dd7a",
+        "android_client_info": {
+          "package_name": "com.syimicode.pmiilauncher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957711699471-3i9stbc72uu70r7k0d6009lq0i1thp79.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.syimicode.pmiilauncher",
+            "certificate_hash": "2d2806ba7eebdbf1a0309b0df5f1a2a46733ef6c"
+          }
+        },
+        {
+          "client_id": "957711699471-up6bugc3t6qof5m4bojful3a4sqbirbs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuBmeZMKb5LWZoQTKnLWCI2LOdixuFVjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957711699471-up6bugc3t6qof5m4bojful3a4sqbirbs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

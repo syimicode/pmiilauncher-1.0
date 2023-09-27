@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentSatu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="?attr/colorOnPrimary"
+    tools:context=".fragment.HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56sdp"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorOnPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="center"
+            android:text="@string/pmii_launcher"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="@dimen/_16ssp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--  RELATIVE LAYOUT UNTUK TAMPILAN INTERNET ACCESS  -->
+    <RelativeLayout
+        android:id="@+id/layoutConnected"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar1"
+        android:animateLayoutChanges="true">
+
+        <!--  RecyclerView menampilkan sejumlah data secara dinamis  -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvWallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorOnPrimary"
+            tools:listitem="@layout/item_wallpaper" />
+    </RelativeLayout>
+
+
+    <!--  LINEAR LAYOUT UNTUK TAMPILAN NO INTERNET ACCESS  -->
+    <LinearLayout
+        android:id="@+id/layoutDisconnected"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar1"
+        android:background="?attr/colorOnPrimary"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="@dimen/_192sdp"
+            android:layout_height="@dimen/_192sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_40sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/spooky_ghost"
+            app:lottie_speed="1.30" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="@string/tidak_ada_koneksi_internet"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="@dimen/_16ssp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text="@string/hubungkan_koneksi_internet"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_14ssp" />
+
+        <Button
+            android:id="@+id/btnCobaLagi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:stateListAnimator="@null"
+            android:text="@string/coba_lagi"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_14ssp"
+            app:backgroundTint="@color/blue"
+            app:cornerRadius="@dimen/_10sdp"
+            app:rippleColor="#4DFFFFFF" />
+    </LinearLayout>
+
+</RelativeLayout>

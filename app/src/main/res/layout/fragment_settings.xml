@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentTiga"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnPrimary"
+    tools:context=".fragment.SettingsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56sdp"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorOnPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="center"
+            android:text="@string/pengaturan"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="@dimen/_16ssp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@id/toolbar3"
+        android:background="?attr/colorSecondaryVariant"
+        android:visibility="visible" />
+
+    <!--    BARIS PERTAMA    -->
+    <LinearLayout
+        android:id="@+id/linear_contributor"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_64sdp"
+        android:layout_below="@id/toolbar3"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/_64sdp"
+            android:layout_height="@dimen/_64sdp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_contributor" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/kontributor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center_vertical"
+            android:text="@string/kontributor"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="@dimen/_20ssp" />
+    </LinearLayout>
+
+    <!--    BARIS KEDUA    -->
+    <LinearLayout
+        android:id="@+id/linear_contrast"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_64sdp"
+        android:layout_below="@id/linear_contributor"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/_64sdp"
+            android:layout_height="@dimen/_64sdp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_contrast" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/temaGelap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/tema_gelap"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="@dimen/_20ssp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_64sdp"
+                android:layout_alignParentEnd="true"
+                android:gravity="center">
+
+                <Switch
+                    android:id="@+id/switchMode"
+                    android:layout_width="@dimen/_64sdp"
+                    android:layout_height="@dimen/_64sdp"
+                    android:layout_gravity="center_vertical"
+                    android:thumbTint="@drawable/item_thumb_switch"
+                    android:trackTint="@drawable/item_track_switch"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--    BARIS KETIGA    -->
+    <LinearLayout
+        android:id="@+id/linear_rating"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_64sdp"
+        android:layout_below="@id/linear_contrast"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/_64sdp"
+            android:layout_height="@dimen/_64sdp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_rating" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/beriRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/beri_rating"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="@dimen/_20ssp" />
+    </LinearLayout>
+
+    <!--    BARIS KEEMPAT    -->
+    <LinearLayout
+        android:id="@+id/linear_share"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_64sdp"
+        android:layout_below="@id/linear_rating"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/_64sdp"
+            android:layout_height="@dimen/_64sdp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_share" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bagikan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/bagikan"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="@dimen/_20ssp" />
+    </LinearLayout>
+
+    <!--    BARIS KELIMA    -->
+    <LinearLayout
+        android:id="@+id/linear_about"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_64sdp"
+        android:layout_below="@id/linear_share"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/_64sdp"
+            android:layout_height="@dimen/_64sdp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_info" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tentang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/tentang"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="@dimen/_20ssp" />
+    </LinearLayout>
+
+</RelativeLayout>
