@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.PMIILauncher.MySplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#FFFFFF</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_screen</item>
+        <item name="postSplashScreenTheme">@style/Theme.PMIILauncher</item>
+
+        <!-- Menampilkan navigasi sistem -->
+        <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+        <!-- Menampilkan status bar -->
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+</resources>

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.fragment.app.Fragment
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
@@ -16,7 +17,6 @@ import com.syimicode.pmiilauncher.fragment.FavoriteFragment
 import com.syimicode.pmiilauncher.fragment.HomeFragment
 import com.syimicode.pmiilauncher.fragment.SettingsFragment
 
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -25,6 +25,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Inisialisasi API SplashScreen
+        installSplashScreen()
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -44,10 +48,12 @@ class MainActivity : AppCompatActivity() {
 //                    Tampilkan Fragment Satu
                     changeFragment(HomeFragment())
                 }
+
                 R.id.favorite -> {
 //                    Tampilkan Fragment Dua
                     changeFragment(FavoriteFragment())
                 }
+
                 R.id.settings -> {
 //                    Tampilkan Fragment Tiga
                     changeFragment(SettingsFragment())
@@ -98,8 +104,10 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     //  Jika proses masuk gagal, tampilkan pesan kepada pengguna.
                     Log.w(TAG, "signInAnonymously:failure", task.exception)
-                    Toast.makeText(baseContext, "Authentication failed.",
-                        Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        baseContext, "Authentication failed.",
+                        Toast.LENGTH_SHORT
+                    ).show()
                     updateUI(null)
                 }
             }

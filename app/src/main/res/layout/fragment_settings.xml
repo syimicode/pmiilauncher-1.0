@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar3"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_56sdp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="?attr/colorOnPrimary">
 
@@ -18,7 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/inter_semibold"
+            android:layout_marginVertical="@dimen/_16sdp"
+            android:fontFamily="@font/exo_semibold"
             android:gravity="center"
             android:text="@string/pengaturan"
             android:textColor="?attr/colorPrimary"
@@ -36,22 +37,25 @@
     <LinearLayout
         android:id="@+id/linear_contributor"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_64sdp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/toolbar3"
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_16sdp">
 
         <LinearLayout
-            android:layout_width="@dimen/_64sdp"
-            android:layout_height="@dimen/_64sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
             android:gravity="center">
 
             <ImageView
-                android:layout_width="@dimen/_21sdp"
+                android:layout_width="@dimen/_24sdp"
                 android:layout_height="@dimen/_24sdp"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_contributor" />
@@ -62,33 +66,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:fontFamily="@font/inter_medium"
+            android:fontFamily="@font/exo"
             android:gravity="center_vertical"
             android:text="@string/kontributor"
             android:textColor="?attr/colorPrimary"
-            android:textSize="@dimen/_20ssp" />
+            android:textSize="@dimen/_16ssp" />
     </LinearLayout>
 
     <!--    BARIS KEDUA    -->
     <LinearLayout
         android:id="@+id/linear_contrast"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_64sdp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/linear_contributor"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_16sdp">
 
         <LinearLayout
-            android:layout_width="@dimen/_64sdp"
-            android:layout_height="@dimen/_64sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
             android:gravity="center">
 
             <ImageView
                 android:layout_width="@dimen/_24sdp"
                 android:layout_height="@dimen/_24sdp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_contrast" />
+                android:src="@drawable/ic_theme" />
         </LinearLayout>
 
         <TextView
@@ -96,52 +103,49 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/inter_medium"
+            android:fontFamily="@font/exo"
             android:text="@string/tema_gelap"
             android:textColor="?attr/colorPrimary"
-            android:textSize="@dimen/_20ssp" />
+            android:textSize="@dimen/_16ssp" />
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center_vertical">
+            android:layout_weight="1"
+            android:gravity="end">
 
-            <LinearLayout
-                android:layout_width="@dimen/_100sdp"
-                android:layout_height="@dimen/_64sdp"
-                android:layout_alignParentEnd="true"
-                android:gravity="center">
+            <Switch
+                android:id="@+id/switchMode"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:thumbTint="@drawable/item_thumb_switch"
+                android:trackTint="@drawable/item_track_switch"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </LinearLayout>
 
-                <Switch
-                    android:id="@+id/switchMode"
-                    android:layout_width="@dimen/_64sdp"
-                    android:layout_height="@dimen/_64sdp"
-                    android:layout_gravity="center_vertical"
-                    android:thumbTint="@drawable/item_thumb_switch"
-                    android:trackTint="@drawable/item_track_switch"
-                    tools:ignore="UseSwitchCompatOrMaterialXml" />
-            </LinearLayout>
-
-        </RelativeLayout>
     </LinearLayout>
 
     <!--    BARIS KETIGA    -->
     <LinearLayout
         android:id="@+id/linear_rating"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_64sdp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/linear_contrast"
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_16sdp">
 
         <LinearLayout
-            android:layout_width="@dimen/_64sdp"
-            android:layout_height="@dimen/_64sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
             android:gravity="center">
 
             <ImageView
@@ -156,32 +160,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/inter_medium"
+            android:fontFamily="@font/exo"
             android:text="@string/beri_rating"
             android:textColor="?attr/colorPrimary"
-            android:textSize="@dimen/_20ssp" />
+            android:textSize="@dimen/_16ssp" />
     </LinearLayout>
 
     <!--    BARIS KEEMPAT    -->
     <LinearLayout
         android:id="@+id/linear_share"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_64sdp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/linear_rating"
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_16sdp">
 
         <LinearLayout
-            android:layout_width="@dimen/_64sdp"
-            android:layout_height="@dimen/_64sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
             android:gravity="center">
 
             <ImageView
-                android:layout_width="@dimen/_23sdp"
+                android:layout_width="@dimen/_24sdp"
                 android:layout_height="@dimen/_24sdp"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_share" />
@@ -192,28 +199,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/inter_medium"
+            android:fontFamily="@font/exo"
             android:text="@string/bagikan"
             android:textColor="?attr/colorPrimary"
-            android:textSize="@dimen/_20ssp" />
+            android:textSize="@dimen/_16ssp" />
     </LinearLayout>
 
     <!--    BARIS KELIMA    -->
     <LinearLayout
         android:id="@+id/linear_about"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_64sdp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/linear_share"
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_16sdp">
 
         <LinearLayout
-            android:layout_width="@dimen/_64sdp"
-            android:layout_height="@dimen/_64sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
             android:gravity="center">
 
             <ImageView
@@ -228,10 +238,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/inter_medium"
+            android:fontFamily="@font/exo"
             android:text="@string/tentang"
             android:textColor="?attr/colorPrimary"
-            android:textSize="@dimen/_20ssp" />
+            android:textSize="@dimen/_16ssp" />
     </LinearLayout>
 
 </RelativeLayout>

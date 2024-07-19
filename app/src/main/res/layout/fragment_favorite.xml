@@ -12,7 +12,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_56sdp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="?attr/colorOnPrimary">
 
@@ -20,7 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/inter_semibold"
+            android:layout_marginVertical="@dimen/_16sdp"
+            android:fontFamily="@font/exo_semibold"
             android:gravity="center"
             android:text="@string/favorit"
             android:textColor="?attr/colorPrimary"
@@ -55,44 +56,54 @@
         android:orientation="vertical"
         android:visibility="gone">
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/animationHeart"
-            android:layout_width="@dimen/_192sdp"
-            android:layout_height="@dimen/_192sdp"
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_240sdp"
+            android:layout_height="@dimen/_180sdp"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_40sdp"
-            app:lottie_autoPlay="true"
-            app:lottie_enableMergePathsForKitKatAndAbove="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/flying_heart"
-            tools:ignore="MissingConstraints" />
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="0dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationHeart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:lottie_autoPlay="true"
+                app:lottie_enableMergePathsForKitKatAndAbove="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/animation_design"
+                tools:ignore="MissingConstraints" />
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/textFav1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="@dimen/_24sdp"
-            android:layout_marginEnd="@dimen/_24sdp"
-            android:fontFamily="@font/inter_medium"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:fontFamily="@font/exo_semibold"
             android:gravity="center"
-            android:text="@string/belum_ada_yang_tersimpan"
+            android:text="@string/belum_tersimpan"
             android:textColor="?attr/colorPrimary"
-            android:textSize="@dimen/_16ssp" />
+            android:textSize="@dimen/_14ssp" />
 
         <TextView
             android:id="@+id/textFav2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="@dimen/_24sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:layout_marginEnd="@dimen/_24sdp"
-            android:fontFamily="@font/inter_regular"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:fontFamily="@font/exo"
             android:gravity="center"
             android:text="@string/buat_daftar_favorit"
-            android:textColor="@color/grey"
-            android:textSize="@dimen/_14ssp" />
+            android:textColor="@color/textSecondary"
+            android:textSize="@dimen/_12ssp" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -7,14 +7,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.syimicode.pmiilauncher.SharedPrefDarkMode
-import com.syimicode.pmiilauncher.databinding.FragmentSettingsBinding
 import com.syimicode.pmiilauncher.activity.AboutActivity
 import com.syimicode.pmiilauncher.activity.ContributorActivity
-import kotlinx.android.synthetic.main.fragment_settings.*
+import com.syimicode.pmiilauncher.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
 

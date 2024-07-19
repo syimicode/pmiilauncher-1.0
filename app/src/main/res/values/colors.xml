@@ -6,14 +6,33 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
 
-    <color name="red">#FF5858</color>
+    <!--    COLOR VERSI 2.0    -->
+    <color name="red">#FC5C65</color>
+    <color name="orange">#FD9644</color>
     <color name="yellow">#FFCB05</color>
-    <color name="blue">#0779E3</color>
+    <color name="green">#26DE81</color>
+    <color name="purple">#A65EEA</color>
+
+    <color name="blue">#0BA0FD</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
     <color name="grey">#B1B1B1</color>
-    <color name="blackSecondary">#3C3C3C</color>
-    <color name="grey_transparent">#80E1E1E1</color>
-    <color name="transparent_pmii">#99000000</color>
+    <color name="blackSecondary">#222222</color>
+    <color name="textSecondary">#8E8E93</color>
+    <color name="line_lightmode">#CCEEEEEE</color>
+    <color name="line_darkmode">#CC555555</color>
+    <color name="transparent_pmii">#80000000</color>
+
+    <!--    COLOR VERSI 1.0    -->
+    <!--    <color name="red">#FF5858</color>-->
+    <!--    <color name="yellow">#FFCB05</color>-->
+    <!--    <color name="blue">#0779E3</color>-->
+    <!--    <color name="black">#FF000000</color>-->
+    <!--    <color name="white">#FFFFFFFF</color>-->
+
+    <!--    <color name="grey">#B1B1B1</color>-->
+    <!--    <color name="blackSecondary">#3C3C3C</color>-->
+    <!--    <color name="grey_transparent">#80E1E1E1</color>-->
+    <!--    <color name="transparent_pmii">#99000000</color>-->
 </resources>

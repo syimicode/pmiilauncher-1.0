@@ -5,76 +5,81 @@
     android:id="@+id/relativeInfo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/_20sdp"
     tools:context=".activity.InfoActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_marginHorizontal="@dimen/_24sdp"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="@dimen/_16sdp"
-        app:cardUseCompatPadding="true">
+        app:cardCornerRadius="@dimen/_16sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:gravity="center"
-            android:orientation="vertical"
-            android:paddingHorizontal="@dimen/_16sdp"
-            android:paddingBottom="@dimen/_24sdp">
+
+            android:orientation="vertical">
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/lottieCreator"
-                android:layout_width="@dimen/_192sdp"
-                android:layout_height="@dimen/_192sdp"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginTop="@dimen/_24sdp"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"
-                app:lottie_rawRes="@raw/content_creator"
+                app:lottie_rawRes="@raw/animation_contributor"
                 app:lottie_speed="1.25" />
 
             <TextView
                 android:id="@+id/txtKontributor"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_minus20sdp"
-                android:fontFamily="@font/inter_medium"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:fontFamily="@font/exo_medium"
+                android:gravity="center"
                 android:text="@string/kontributorInfo"
-                android:textColor="@color/grey"
-                android:textSize="@dimen/_14ssp" />
+                android:textColor="@color/textSecondary"
+                android:textSize="@dimen/_12ssp" />
 
             <TextView
                 android:id="@+id/inputKontributor"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_4sdp"
-                android:fontFamily="@font/inter_regular"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/exo"
                 android:gravity="center"
                 android:text="@string/admin"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_14ssp" />
+                android:textSize="@dimen/_12ssp" />
 
             <TextView
                 android:id="@+id/txtSekretariat"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_16sdp"
-                android:fontFamily="@font/inter_medium"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/exo_medium"
+                android:gravity="center"
                 android:text="@string/sekretariatInfo"
-                android:textColor="@color/grey"
-                android:textSize="@dimen/_14ssp" />
+                android:textColor="@color/textSecondary"
+                android:textSize="@dimen/_12ssp" />
 
             <TextView
                 android:id="@+id/inputSekretariat"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_4sdp"
-                android:fontFamily="@font/inter_regular"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_24sdp"
+                android:fontFamily="@font/exo"
                 android:gravity="center"
                 android:text="@string/pengurus_besar_pmii"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_14ssp" />
+                android:textSize="@dimen/_12ssp" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

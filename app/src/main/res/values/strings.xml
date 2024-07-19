@@ -3,35 +3,36 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="pmii_launcher">PMII Launcher</string>
-    <string name="versi">Versi 1.0.0</string>
-    <string name="_2021_syimicode">© 2023 PMII Launcher.</string>
+    <string name="versi">Versi 2.0</string>
+    <string name="copyright">©2024 PMII Launcher.</string>
     <string name="kontributor">Kontributor</string>
-    <string name="unggah_wallpaper">Unggah Wallpaper</string>
-    <string name="jenis_file_jpg_jpeg_png">Jenis format file JPEG</string>
-    <string name="nama_kontributor">Nama Kontributor</string>
+    <string name="unggah_wallpaper">Unggah wallpaper</string>
+    <string name="format_file">Gunakan file format JPEG</string>
+    <string name="nama_kontributor">Nama lengkap</string>
     <string name="alamat_email">Alamat Email</string>
     <string name="asal_sekretariat">Asal Sekretariat</string>
-    <string name="bagikan_karya">Bagikan karya menarik Sahabat/i agar terlihat oleh jutaan pengguna!</string>
-    <string name="hak_posting_adalah_keputusan_admin"><i>Hak posting adalah keputusan Admin.</i></string>
-    <string name="kontributorInfo">Kontributor:</string>
+    <string name="bagikan_karya">Bagikan karya menarik sahabat/i agar dipakai oleh jutaan pengguna!</string>
+    <string name="hak_posting_adalah_keputusan_admin">Hak posting adalah keputusan admin.</string>
+    <string name="kontributorInfo">Kontributor</string>
     <string name="admin">Admin</string>
-    <string name="sekretariatInfo">Sekretariat:</string>
+    <string name="sekretariatInfo">Sekretariat</string>
     <string name="pengurus_besar_pmii">Pengurus Besar PMII</string>
     <string name="atur_untuk_layar_beranda">Atur untuk layar beranda</string>
     <string name="atur_untuk_layar_kunci">Atur untuk layar kunci</string>
     <string name="tutup">Tutup</string>
     <string name="favorit">Favorit</string>
-    <string name="belum_ada_yang_tersimpan">Belum ada yang tersimpan</string>
-    <string name="buat_daftar_favorit">Buat daftar favorit dengan klik icon hati di sudut kanan atas wallpaper..</string>
-    <string name="tidak_ada_koneksi_internet">Tidak ada koneksi internet</string>
-    <string name="hubungkan_koneksi_internet">Hubungkan koneksi internet, coba lagi..</string>
-    <string name="coba_lagi">Coba lagi</string>
+    <string name="belum_tersimpan">Buat daftar favorit, yuk?</string>
+    <string name="buat_daftar_favorit">Klik icon bintang di sudut kanan wallpaper.</string>
+    <string name="tidak_ada_internet">Tidak ada internet</string>
+    <string name="hubungkan_koneksi_internet">Hubungkan koneksi internet, refresh.</string>
+    <string name="coba_lagi">Refresh</string>
     <string name="pengaturan">Pengaturan</string>
-    <string name="tema_gelap">Tema Gelap</string>
-    <string name="beri_rating">Beri Rating</string>
+    <string name="tema_gelap">Tema gelap</string>
+    <string name="beri_rating">Beri rating</string>
     <string name="bagikan">Bagikan</string>
     <string name="tentang">Tentang</string>
     <string name="loading">Sedang memproses..</string>
     <string name="itemwallpaperimages">itemWallpaperImages</string>
-    <string name="ketentuan_upload">Ukuran <b><font color="#0779E3">2160 x 3840 px</font></b> dan resolusi <b><font color="#0779E3">300 dpi.</font></b></string>
+    <string name="ketentuan_upload">Ukuran 2160 x 3840px dan resolusi 300 dpi.</string>
+    <!--    <string name="ketentuan_upload">Ukuran <b><font color="#0779E3">2160 x 3840 px</font></b> dan resolusi <b><font color="#0779E3">300 dpi.</font></b></string>-->
 </resources>

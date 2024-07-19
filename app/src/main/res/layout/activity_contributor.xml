@@ -1,284 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnPrimary"
+    tools:context=".activity.ContributorActivity">
 
-    <RelativeLayout
+    <TextView
+        android:id="@+id/contributor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:fontFamily="@font/exo_medium"
+        android:text="@string/kontributor"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="@dimen/_20ssp" />
+
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorOnPrimary"
-        android:orientation="vertical"
-        tools:context=".activity.ContributorActivity">
+        android:layout_alignStart="@+id/btnUnggahWallpaper"
+        android:layout_alignTop="@+id/btnUnggahWallpaper"
+        android:layout_alignEnd="@+id/btnUnggahWallpaper"
+        android:layout_alignBottom="@id/btnUnggahWallpaper"
+        app:cardCornerRadius="@dimen/_5sdp">
 
-        <TextView
-            android:id="@+id/contributor"
+        <ImageView
+            android:id="@+id/btnPreview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!--    BARIS PERTAMA    -->
+    <RelativeLayout
+        android:id="@+id/btnUnggahWallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_below="@id/contributor"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/btn_contributor"
+        android:backgroundTint="?attr/colorSecondary"
+        android:elevation="@dimen/_1sdp">
+
+        <RelativeLayout
+            android:id="@+id/linear_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_16sdp"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/kontributor"
-            android:textColor="?attr/colorPrimary"
-            android:textSize="@dimen/_22ssp" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/btnUnggahWallpaper"
-            android:layout_alignTop="@+id/btnUnggahWallpaper"
-            android:layout_alignEnd="@+id/btnUnggahWallpaper"
-            android:layout_alignBottom="@id/btnUnggahWallpaper"
-            app:cardCornerRadius="@dimen/_10sdp">
+            android:layout_centerVertical="true"
+            android:gravity="center">
 
             <ImageView
-                android:id="@+id/btnPreview"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_80sdp"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop" />
-        </com.google.android.material.card.MaterialCardView>
-
-        <!--    BARIS PERTAMA    -->
-        <RelativeLayout
-            android:id="@+id/btnUnggahWallpaper"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_80sdp"
-            android:layout_below="@id/contributor"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:background="@drawable/btn_contributor"
-            android:backgroundTint="?attr/colorSecondary"
-            android:elevation="@dimen/_1sdp">
-
-            <RelativeLayout
-                android:id="@+id/linear_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
                 android:layout_centerVertical="true"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="@dimen/_24sdp"
-                    android:layout_height="@dimen/_24sdp"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/_16sdp"
-                    android:layout_marginTop="@dimen/_24sdp"
-                    android:layout_marginEnd="@dimen/_16sdp"
-                    android:layout_marginBottom="@dimen/_24sdp"
-                    android:src="@drawable/ic_image" />
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@id/linear_image">
-
-                <TextView
-                    android:id="@+id/unggah"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter_medium"
-                    android:text="@string/unggah_wallpaper"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="@dimen/_16ssp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/unggah"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:fontFamily="@font/inter_regular"
-                    android:text="@string/jenis_file_jpg_jpeg_png"
-                    android:textColor="@color/grey"
-                    android:textSize="@dimen/_14ssp" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/linear_right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="@dimen/_10sdp"
-                    android:layout_height="@dimen/_18sdp"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center"
-                    android:layout_margin="@dimen/_16sdp"
-                    android:src="@drawable/ic_right" />
-            </RelativeLayout>
-
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:src="@drawable/ic_image" />
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/ketentuanUpload"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btnUnggahWallpaper"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:fontFamily="@font/inter_regular"
-            android:text="@string/ketentuan_upload"
-            android:textColor="?attr/colorPrimary"
-            android:textSize="@dimen/_12ssp" />
 
-        <!--    BARIS KEDUA    -->
-        <EditText
-            android:id="@+id/userKontributor"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_56sdp"
-            android:layout_below="@id/ketentuanUpload"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:background="@drawable/btn_contributor"
-            android:fontFamily="@font/inter_regular"
-            android:hint="@string/nama_kontributor"
-            android:inputType="text"
-            android:maxLength="60"
-            android:paddingStart="@dimen/_16sdp"
-            android:textColor="?attr/colorPrimary"
-            android:textColorHighlight="@color/grey"
-            android:textColorHint="@color/grey"
-            android:textCursorDrawable="@null"
-            android:textSize="@dimen/_16ssp"
-            tools:ignore="RtlSymmetry" />
-
-        <!--    BARIS KETIGA    -->
-        <EditText
-            android:id="@+id/userEmail"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_56sdp"
-            android:layout_below="@id/userKontributor"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_18sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:background="@drawable/btn_contributor"
-            android:fontFamily="@font/inter_regular"
-            android:hint="@string/alamat_email"
-            android:inputType="textEmailAddress"
-            android:paddingStart="@dimen/_16sdp"
-            android:textColor="?attr/colorPrimary"
-            android:textColorHighlight="@color/grey"
-            android:textColorHint="@color/grey"
-            android:textCursorDrawable="@null"
-            android:textSize="@dimen/_16ssp"
-            tools:ignore="RtlSymmetry" />
-
-        <!--    BARIS KEEMPAT    -->
-        <EditText
-            android:id="@+id/userSekretariat"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_56sdp"
-            android:layout_below="@+id/userEmail"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_18sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:background="@drawable/btn_contributor"
-            android:fontFamily="@font/inter_regular"
-            android:hint="@string/asal_sekretariat"
-            android:inputType="text"
-            android:paddingStart="@dimen/_16sdp"
-            android:textColor="?attr/colorPrimary"
-            android:textColorHighlight="@color/grey"
-            android:textColorHint="@color/grey"
-            android:textCursorDrawable="@null"
-            android:textSize="@dimen/_16ssp"
-            tools:ignore="RtlSymmetry" />
-
-        <TextView
-            android:id="@+id/description1"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/userSekretariat"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:fontFamily="@font/inter_regular"
-            android:lineSpacingExtra="@dimen/_4ssp"
-            android:text="@string/bagikan_karya"
-            android:textColor="@color/grey"
-            android:textSize="@dimen/_14ssp" />
-
-        <RelativeLayout
-            android:id="@+id/description2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/description1"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp">
-
-            <ImageView
-                android:id="@+id/imgInfo"
-                android:layout_width="@dimen/_14sdp"
-                android:layout_height="@dimen/_14sdp"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_info"
-                app:tint="#FF5858" />
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/linear_image">
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/unggah"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/_4sdp"
-                android:layout_toEndOf="@id/imgInfo"
-                android:fontFamily="@font/inter_regular"
-                android:gravity="center_vertical"
-                android:text="@string/hak_posting_adalah_keputusan_admin"
-                android:textColor="#FF5858"
+                android:fontFamily="@font/exo_medium"
+                android:text="@string/unggah_wallpaper"
+                android:textColor="?attr/colorPrimary"
                 android:textSize="@dimen/_14ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/unggah"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/exo"
+                android:text="@string/format_file"
+                android:textColor="@color/textSecondary"
+                android:textSize="@dimen/_12ssp" />
         </RelativeLayout>
 
-        <Button
-            android:id="@+id/btnKirim"
-            android:layout_width="match_parent"
-            android:layout_below="@id/description2"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_height="@dimen/_56sdp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:layout_marginBottom="@dimen/_24sdp"
-            android:fontFamily="@font/inter_medium"
-            android:gravity="center"
-            android:letterSpacing="0.02"
-            android:stateListAnimator="@null"
-            android:text="Kirim"
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textColor="#FFFFFF"
-            android:textSize="@dimen/_16ssp"
-            app:backgroundTint="@color/blue"
-            app:cornerRadius="@dimen/_10sdp"
-            app:rippleColor="#4DFFFFFF"
-            tools:ignore="HardcodedText" />
+        <RelativeLayout
+            android:id="@+id/linear_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:src="@drawable/ic_right" />
+        </RelativeLayout>
 
     </RelativeLayout>
 
-</ScrollView>
+    <TextView
+        android:id="@+id/ketentuanUpload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnUnggahWallpaper"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:fontFamily="@font/exo"
+        android:text="@string/ketentuan_upload"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="@dimen/_12ssp" />
+
+    <!--    BARIS KEDUA    -->
+    <EditText
+        android:id="@+id/userKontributor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ketentuanUpload"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/btn_contributor"
+        android:fontFamily="@font/exo"
+        android:hint="@string/nama_kontributor"
+        android:inputType="text"
+        android:maxLength="60"
+        android:paddingVertical="@dimen/_12sdp"
+        android:paddingStart="@dimen/_16sdp"
+        android:textColor="?attr/colorPrimary"
+        android:textColorHighlight="@color/textSecondary"
+        android:textColorHint="@color/textSecondary"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/_14ssp"
+        tools:ignore="RtlSymmetry" />
+
+    <!--    BARIS KETIGA    -->
+    <EditText
+        android:id="@+id/userEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userKontributor"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/btn_contributor"
+        android:fontFamily="@font/exo"
+        android:hint="@string/alamat_email"
+        android:inputType="textEmailAddress"
+        android:paddingVertical="@dimen/_12sdp"
+        android:paddingStart="@dimen/_16sdp"
+        android:textColor="?attr/colorPrimary"
+        android:textColorHighlight="@color/textSecondary"
+        android:textColorHint="@color/textSecondary"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/_14ssp"
+        tools:ignore="RtlSymmetry" />
+
+    <!--    BARIS KEEMPAT    -->
+    <EditText
+        android:id="@+id/userSekretariat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/btn_contributor"
+        android:fontFamily="@font/exo"
+        android:hint="@string/asal_sekretariat"
+        android:inputType="text"
+        android:paddingVertical="@dimen/_12sdp"
+        android:paddingStart="@dimen/_16sdp"
+        android:textColor="?attr/colorPrimary"
+        android:textColorHighlight="@color/textSecondary"
+        android:textColorHint="@color/textSecondary"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/_14ssp"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/description1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userSekretariat"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:fontFamily="@font/exo"
+        android:text="@string/bagikan_karya"
+        android:textColor="@color/textSecondary"
+        android:textSize="@dimen/_12ssp" />
+
+    <RelativeLayout
+        android:id="@+id/description2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description1"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp">
+
+        <ImageView
+            android:id="@+id/imgInfo"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_info_red" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_toEndOf="@id/imgInfo"
+            android:fontFamily="@font/exo"
+            android:gravity="center_vertical"
+            android:text="@string/hak_posting_adalah_keputusan_admin"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_12ssp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnKirim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:fontFamily="@font/exo_semibold"
+        android:gravity="center"
+        android:letterSpacing="0.02"
+        android:paddingVertical="@dimen/_12sdp"
+        android:stateListAnimator="@null"
+        android:text="Upload Karya"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/_14ssp"
+        app:backgroundTint="@color/blue"
+        app:cornerRadius="@dimen/_10sdp"
+        app:rippleColor="#4DFFFFFF"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

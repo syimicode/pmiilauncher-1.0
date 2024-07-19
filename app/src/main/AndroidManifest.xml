@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.syimicode.pmiilauncher">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
@@ -37,16 +36,22 @@
             android:exported="false" />
         <activity
             android:name=".activity.MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.SplashScreen"
             android:exported="true"
-            android:theme="@style/Theme.SplashScreen">
+            android:theme="@style/Theme.PMIILauncher.MySplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<!--        <activity-->
+<!--            android:name=".activity.SplashScreen"-->
+<!--            android:exported="false"-->
+<!--            android:theme="@style/Theme.SplashScreen">-->
+<!--        </activity>-->
+
+<!--        <meta-data-->
+<!--            android:name="preloaded_fonts"-->
+<!--            android:resource="@array/preloaded_fonts" />-->
     </application>
 
 </manifest>

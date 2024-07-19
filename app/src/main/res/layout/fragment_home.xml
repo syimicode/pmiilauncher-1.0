@@ -12,7 +12,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar1"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_56sdp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="?attr/colorOnPrimary">
 
@@ -20,7 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/inter_semibold"
+            android:layout_marginVertical="@dimen/_16sdp"
+            android:fontFamily="@font/exo_semibold"
             android:gravity="center"
             android:text="@string/pmii_launcher"
             android:textColor="?attr/colorPrimary"
@@ -56,10 +57,10 @@
         android:visibility="gone">
 
         <com.airbnb.lottie.LottieAnimationView
-            android:layout_width="@dimen/_192sdp"
-            android:layout_height="@dimen/_192sdp"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_80sdp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/spooky_ghost"
@@ -71,11 +72,12 @@
             android:layout_gravity="center"
             android:layout_marginStart="@dimen/_24sdp"
             android:layout_marginEnd="@dimen/_24sdp"
-            android:fontFamily="@font/inter_medium"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:fontFamily="@font/exo_semibold"
             android:gravity="center"
-            android:text="@string/tidak_ada_koneksi_internet"
+            android:text="@string/tidak_ada_internet"
             android:textColor="?attr/colorPrimary"
-            android:textSize="@dimen/_16ssp" />
+            android:textSize="@dimen/_14ssp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -83,29 +85,31 @@
             android:layout_gravity="center"
             android:layout_marginStart="@dimen/_24sdp"
             android:layout_marginEnd="@dimen/_24sdp"
-            android:fontFamily="@font/inter_regular"
+            android:fontFamily="@font/exo"
             android:gravity="center"
             android:text="@string/hubungkan_koneksi_internet"
-            android:textColor="@color/grey"
-            android:textSize="@dimen/_14ssp" />
+            android:textColor="@color/textSecondary"
+            android:textSize="@dimen/_12ssp" />
 
         <Button
             android:id="@+id/btnCobaLagi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:fontFamily="@font/inter_medium"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/exo_semibold"
             android:gravity="center"
             android:letterSpacing="0.02"
+            android:paddingHorizontal="@dimen/_24sdp"
+            android:paddingVertical="@dimen/_8sdp"
             android:stateListAnimator="@null"
             android:text="@string/coba_lagi"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="@dimen/_14ssp"
+            android:textSize="@dimen/_12ssp"
             app:backgroundTint="@color/blue"
-            app:cornerRadius="@dimen/_10sdp"
+            app:cornerRadius="@dimen/_5sdp"
             app:rippleColor="#4DFFFFFF" />
     </LinearLayout>
 

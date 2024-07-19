@@ -16,12 +16,11 @@ import com.syimicode.pmiilauncher.databinding.ActivityContributorBinding
 import com.syimicode.pmiilauncher.model.UserModel
 import com.syimicode.pmiilauncher.utils.Config
 import com.syimicode.pmiilauncher.utils.Config.hideDialog
-import kotlinx.android.synthetic.main.activity_contributor.*
 import java.io.ByteArrayOutputStream
 
 class ContributorActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityContributorBinding
+    private lateinit var binding: ActivityContributorBinding
 
     private var imageUri: Uri? = null
 
@@ -30,10 +29,10 @@ class ContributorActivity : AppCompatActivity() {
         imageUri = it
 
         //  PROSES MENAMPILKAN GAMBAR YANG TELAH DIPILIH DARI GALERI (MENGGUNAKAN LIBRARY GLIDE)
-        Glide.with(this).load(imageUri).into(btnPreview)
+        Glide.with(this).load(imageUri).into(binding.btnPreview)
 
         //  AGAR btnUnggahWallpaper BERADA DIBAWAH DAN btnPreview MENINDIH DIATASNYA
-        btnUnggahWallpaper.alpha = 0f
+        binding.btnUnggahWallpaper.alpha = 0f
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -69,7 +68,7 @@ class ContributorActivity : AppCompatActivity() {
         Config.showDialog(this)
 
         //  DEKLARASI UNTUK FIREBASE STORAGE
-        val filename = userKontributor.text.toString()
+        val filename = binding.userKontributor.text.toString()
         val storageRef = FirebaseStorage.getInstance().getReference("Kontributor/$filename")
 
         storageRef.putFile(imageUri!!)
@@ -107,7 +106,7 @@ class ContributorActivity : AppCompatActivity() {
         )
 
         //  DEKLARASI UNTUK FIREBASE REALTIME DATABASE
-        val uid = userKontributor.text.toString()
+        val uid = binding.userKontributor.text.toString()
         FirebaseDatabase.getInstance().getReference("Kontributor/$uid")
             .setValue(data).addOnCompleteListener {
 
